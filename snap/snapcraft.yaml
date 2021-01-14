@@ -15,7 +15,9 @@ confinement: devmode
 
 parts:
   freegemas:
-    source: https://github.com/terrex/freegemas.git to_snap
+    source: https://github.com/terrex/freegemas.git
+    source-type: git
+    source-branch: 'to_snap'
     plugin: cmake
     build-packages:
       - c++
