@@ -1,5 +1,7 @@
-project(freegemas_project)
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.12)
+project(freegemas
+        VERSION 0.1
+        LANGUAGES CXX)
 
 include(FindPkgConfig)
 
@@ -28,8 +30,11 @@ if (CMAKE_HOST_APPLE)
     )
 endif()
 
+configure_file(include/Config.h.in include/Config.h @ONLY)
+
 include_directories(
-    ${PROJECT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_BINARY_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
 
     ${SDL2_INCLUDE_DIRS}
     ${SDL2IMAGE_INCLUDE_DIRS}
@@ -60,12 +65,6 @@ target_link_libraries(freegemas
   ${LIBINTL_LIBRARIES}
 )
 
-add_custom_target(
-  link_media_folder
-  COMMAND ln -nfs ${PROJECT_SOURCE_DIR}/media ${PROJECT_BINARY_DIR}/media
-)
-
-add_dependencies(
-  freegemas
-  link_media_folder
-)
+install(TARGETS freegemas)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/media
+        DESTINATION share/${CMAKE_PROJECT_NAME})
