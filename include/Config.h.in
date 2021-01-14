@@ -1,0 +1,7 @@
+#ifndef FREEGEMAS_CONFIG_H
+#define FREEGEMAS_CONFIG_H
+
+//#cmakedefine DATADIR "@CMAKE_INSTALL_DATADIR@/share/@CMAKE_PROJECT_NAME@/media/"
+#cmakedefine DATADIR "${DATADIR}"
+
+#endif //FREEGEMAS_CONFIG_H
