@@ -65,6 +65,7 @@ target_link_libraries(freegemas
   ${LIBINTL_LIBRARIES}
 )
 
-install(TARGETS freegemas)
+install(TARGETS freegemas
+        RUNTIME DESTINATION bin)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/media
         DESTINATION share/${CMAKE_PROJECT_NAME})
