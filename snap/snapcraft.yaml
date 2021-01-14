@@ -1,0 +1,28 @@
+---
+name: freegemas    # you probably want to 'snapcraft register <name>'
+base: core18
+version: '0.1'
+summary: Open Source version of the well known Bejeweled game
+license: GPL-2.0-or-later
+description: |
+  Bejeweled is a tile-matching puzzle video game by PopCap Games,
+  developed for browsers in 2001. The goal is to clear gems of the
+  same color, potentially causing a chain reaction. The game sold
+  over 10 million copies and has been downloadedmore than 150 million times
+
+grade: devel
+confinement: devmode
+
+parts:
+  freegemas:
+    plugin: cmake
+    build-packages:
+      - c++
+      - libsdl2-dev
+      - libsdl2-image-dev
+      - libsdl2-ttf-dev
+      - libsdl2-mixer-dev
+
+apps:
+  freegemas:
+    command: freegemas
