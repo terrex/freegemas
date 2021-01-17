@@ -15,6 +15,7 @@ confinement: strict
 
 parts:
   freegemas:
+    source: .
     plugin: cmake
     build-packages:
       - libsdl2-dev
