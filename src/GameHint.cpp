@@ -1,8 +1,9 @@
+#include "Config.h"
 #include "GameHint.h"
 
 void GameHint::setWindow (GoSDL::Window * w)
 {
-    mImgSelector.setWindowAndPath(w, "media/selector.png");
+    mImgSelector.setWindowAndPath(w, MEDIA_DIR "/selector.png");
 }
 
 void GameHint::showHint(Coord location)

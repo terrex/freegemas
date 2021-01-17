@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "ScoreTable.h"
 #include "inter.h"
 
@@ -58,10 +59,10 @@ ScoreTable::ScoreTable(Game * p, int score, string gameMode) : mGame(p)
 
     // Load necessary fonts
     GoSDL::Font fntH1, fntH2, fntLcdBig, fntLcdSmall;;
-    fntH1.setAll(mGame, "media/fuenteMenu.ttf", 60);
-    fntH2.setAll(mGame, "media/fuenteNormal.ttf", 35);
-    fntLcdBig.setAll(mGame, "media/fuentelcd.ttf", 72);
-    fntLcdSmall.setAll(mGame, "media/fuentelcd.ttf", 36);
+    fntH1.setAll(mGame, MEDIA_DIR "/fuenteMenu.ttf", 60);
+    fntH2.setAll(mGame, MEDIA_DIR "/fuenteNormal.ttf", 35);
+    fntLcdBig.setAll(mGame, MEDIA_DIR "/fuentelcd.ttf", 72);
+    fntLcdSmall.setAll(mGame, MEDIA_DIR "/fuentelcd.ttf", 36);
 
     // Cache-render texts
     mRenderedHeader = fntH1.renderText(_("GAME OVER"));

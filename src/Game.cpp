@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "Game.h"
 #include "State.h"
 
@@ -13,7 +14,7 @@ Game::Game ()
     lDEBUG << Log::CON("Game");
 
     mMouseCursor.setWindow(this);
-    mMouseCursor.setPath("media/handCursor.png");
+    mMouseCursor.setPath(MEDIA_DIR "/handCursor.png");
 
     hideCursor();
 

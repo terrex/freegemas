@@ -1,12 +1,13 @@
+#include "Config.h"
 #include "GameBoardSounds.h"
 
 void GameBoardSounds::loadResources()
 {
-    mSfxMatch1.setSample("media/match1.ogg");
-    mSfxMatch2.setSample("media/match2.ogg");
-    mSfxMatch3.setSample("media/match3.ogg");
-    mSfxSelect.setSample("media/select.ogg");
-    mSfxFall.setSample("media/fall.ogg");
+    mSfxMatch1.setSample(MEDIA_DIR "/match1.ogg");
+    mSfxMatch2.setSample(MEDIA_DIR "/match2.ogg");
+    mSfxMatch3.setSample(MEDIA_DIR "/match3.ogg");
+    mSfxSelect.setSample(MEDIA_DIR "/select.ogg");
+    mSfxFall.setSample(MEDIA_DIR "/fall.ogg");
 }
 
 void GameBoardSounds::playSoundSelect()

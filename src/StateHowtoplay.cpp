@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "StateHowToPlay.h"
 
 #include "Game.h"
@@ -9,13 +10,13 @@ StateHowtoplay::StateHowtoplay(Game * p) : State(p)
 {
     lDEBUG << Log::CON("StateHowtoPlay");
 
-    mImgBackground.setWindowAndPath(p, "media/howtoScreen.png");
+    mImgBackground.setWindowAndPath(p, MEDIA_DIR "/howtoScreen.png");
 
     // Build the title text
     GoSDL::Font fontTitle;
 
     fontTitle.setWindow(p);
-    fontTitle.setPathAndSize("media/fuenteMenu.ttf", 48);
+    fontTitle.setPathAndSize(MEDIA_DIR "/fuenteMenu.ttf", 48);
 
     mImgTitle = fontTitle.renderText(_("How to play"), {255, 255, 255, 255});
     mImgTitleShadow = fontTitle.renderText(_("How to play"), {0, 0, 0, 255});
@@ -24,7 +25,7 @@ StateHowtoplay::StateHowtoplay(Game * p) : State(p)
     GoSDL::Font fontSubtitle;
 
     fontSubtitle.setWindow(p);
-    fontSubtitle.setPathAndSize("media/fuenteMenu.ttf", 23);
+    fontSubtitle.setPathAndSize(MEDIA_DIR "/fuenteMenu.ttf", 23);
 
     mImgSubtitle = fontSubtitle.renderText(_("Press escape to go back"), {255, 255, 255, 255});
     mImgSubtitleShadow = fontSubtitle.renderText(_("Press escape to go back"), {0, 0, 0, 255});
@@ -33,7 +34,7 @@ StateHowtoplay::StateHowtoplay(Game * p) : State(p)
     GoSDL::Font fontText;
 
     fontText.setWindow(p);
-    fontText.setPathAndSize("media/fuenteNormal.ttf", 28);
+    fontText.setPathAndSize(MEDIA_DIR "/fuenteNormal.ttf", 28);
 
     string bodyText = "";
 

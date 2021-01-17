@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "GameBoard.h"
 
 #include "Game.h"
@@ -63,17 +64,17 @@ void GameBoard::endGame(int score)
 
 void GameBoard::loadResources()
 {
-    mImgBoard.setWindowAndPath(mGame, "media/gemBoard.png");
-    mImgWhite.setWindowAndPath(mGame, "media/gemWhite.png");
-    mImgRed.setWindowAndPath(mGame, "media/gemRed.png");
-    mImgPurple.setWindowAndPath(mGame, "media/gemPurple.png");
-    mImgOrange.setWindowAndPath(mGame, "media/gemOrange.png");
-    mImgGreen.setWindowAndPath(mGame, "media/gemGreen.png");
-    mImgYellow.setWindowAndPath(mGame, "media/gemYellow.png");
-    mImgBlue.setWindowAndPath(mGame, "media/gemBlue.png");
+    mImgBoard.setWindowAndPath(mGame, MEDIA_DIR "/gemBoard.png");
+    mImgWhite.setWindowAndPath(mGame, MEDIA_DIR "/gemWhite.png");
+    mImgRed.setWindowAndPath(mGame, MEDIA_DIR "/gemRed.png");
+    mImgPurple.setWindowAndPath(mGame, MEDIA_DIR "/gemPurple.png");
+    mImgOrange.setWindowAndPath(mGame, MEDIA_DIR "/gemOrange.png");
+    mImgGreen.setWindowAndPath(mGame, MEDIA_DIR "/gemGreen.png");
+    mImgYellow.setWindowAndPath(mGame, MEDIA_DIR "/gemYellow.png");
+    mImgBlue.setWindowAndPath(mGame, MEDIA_DIR "/gemBlue.png");
 
     // Load the image for the square selector
-    mImgSelector.setWindowAndPath(mGame, "media/selector.png");
+    mImgSelector.setWindowAndPath(mGame, MEDIA_DIR "/selector.png");
 
     // Initialise the hint
     mHint.setWindow(mGame);

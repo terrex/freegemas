@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "BaseButton.h"
 
 #include "go_font.h"
@@ -10,7 +11,7 @@ void BaseButton::set (GoSDL::Window * parentWindow, std::string caption, std::st
     mParentWindow = parentWindow;
 
     // Load the background image
-    mImgBackground.setWindowAndPath(mParentWindow, "media/buttonBackground.png");
+    mImgBackground.setWindowAndPath(mParentWindow, MEDIA_DIR "/buttonBackground.png");
 
     // Set the flag
     mHasIcon = iconPath != "";
@@ -18,7 +19,7 @@ void BaseButton::set (GoSDL::Window * parentWindow, std::string caption, std::st
     // Load the icon image
     if (mHasIcon)
     {
-        mImgIcon.setWindowAndPath(mParentWindow, "media/" + iconPath);
+        mImgIcon.setWindowAndPath(mParentWindow, MEDIA_DIR "/" + iconPath);
     }
 
     setText(caption);
@@ -28,7 +29,7 @@ void BaseButton::setText(std::string caption)
 {
     // Load the font for the button caption
     GoSDL::Font textFont;
-    textFont.setAll(mParentWindow, "media/fuenteNormal.ttf", 27);
+    textFont.setAll(mParentWindow, MEDIA_DIR "/fuenteNormal.ttf", 27);
 
     // Generate the button caption texture
     mImgCaption = textFont.renderText(caption, {255, 255, 255, 255});

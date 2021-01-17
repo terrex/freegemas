@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "StateMainMenu.h"
 
 #include "Game.h"
@@ -27,19 +28,19 @@ StateMainMenu::StateMainMenu(Game * p) : State(p)
 
     // Init background image
     mImgBackground.setWindow(p);
-    mImgBackground.setPath("media/stateMainMenu/mainMenuBackground.png");
+    mImgBackground.setPath(MEDIA_DIR "/stateMainMenu/mainMenuBackground.png");
 
     // Init logo image
     mImgLogo.setWindow(p);
-    mImgLogo.setPath("media/stateMainMenu/mainMenuLogo.png");
+    mImgLogo.setPath(MEDIA_DIR "/stateMainMenu/mainMenuLogo.png");
 
     // Init menu highlight image
     mImgHighl.setWindow(p);
-    mImgHighl.setPath("media/stateMainMenu/menuHighlight.png");
+    mImgHighl.setPath(MEDIA_DIR "/stateMainMenu/menuHighlight.png");
 
     // Load the font
     mFont.setWindow(p);
-    mFont.setPathAndSize("media/fuenteMenu.ttf", 30);
+    mFont.setPathAndSize(MEDIA_DIR "/fuenteMenu.ttf", 30);
 
     // Menu target states
     mMenuTargets = {"stateGameTimetrial", "stateGameEndless", "stateHowtoplay", "stateQuit"};

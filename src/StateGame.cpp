@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "StateGame.h"
 
 #include "Game.h"
@@ -18,7 +19,7 @@ StateGame::StateGame(Game * p) : State(p)
     mGameBoard.setGame(p, this);
 
     // Load the loading screen
-    mImgLoadingBanner.setWindowAndPath(p, "media/loadingBanner.png");
+    mImgLoadingBanner.setWindowAndPath(p, MEDIA_DIR "/loadingBanner.png");
 }
 
 StateGame::~StateGame ()
@@ -133,7 +134,7 @@ void StateGame::setState (tState state)
 void StateGame::loadResources()
 {
     // Load the background image
-    mImgBoard.setWindowAndPath(mGame, "media/board.png");
+    mImgBoard.setWindowAndPath(mGame, MEDIA_DIR "/board.png");
 
     mGameIndicators.loadResources();
     mGameBoard.loadResources();

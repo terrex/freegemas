@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "GameIndicators.h"
 #include "Game.h"
 #include "inter.h"
@@ -20,14 +21,14 @@ void GameIndicators::setGame (Game * g, StateGame * sg)
 void GameIndicators::loadResources()
 {
     // Load the font for the timer
-    mFontTime.setAll(mGame, "media/fuentelcd.ttf", 62);
+    mFontTime.setAll(mGame, MEDIA_DIR "/fuentelcd.ttf", 62);
 
     // Load the font for the scoreboard
-    mFontScore.setAll(mGame, "media/fuentelcd.ttf", 33);
+    mFontScore.setAll(mGame, MEDIA_DIR "/fuentelcd.ttf", 33);
 
     // Font to render some headers
     GoSDL::Font tempHeaderFont;
-    tempHeaderFont.setAll(mGame, "media/fuenteNormal.ttf", 37);
+    tempHeaderFont.setAll(mGame, MEDIA_DIR "/fuenteNormal.ttf", 37);
 
     mImgScoreHeader = tempHeaderFont.renderText(_("score"), {160, 169, 255, 255});
     mImgScoreHeaderShadow = tempHeaderFont.renderText(_("score"), {0,0,0, 255});
@@ -36,10 +37,10 @@ void GameIndicators::loadResources()
     mImgTimeHeaderShadow = tempHeaderFont.renderText(_("time left"), {0,0,0, 255});
 
     // Load the background image for the time
-    mImgTimeBackground.setWindowAndPath(mGame, "media/timeBackground.png");
+    mImgTimeBackground.setWindowAndPath(mGame, MEDIA_DIR "/timeBackground.png");
 
     // Load the background image for the scoreboard
-    mImgScoreBackground.setWindowAndPath(mGame, "media/scoreBackground.png");
+    mImgScoreBackground.setWindowAndPath(mGame, MEDIA_DIR "/scoreBackground.png");
 
     // Buttons
     mHintButton.set(mGame, _("Show hint"), "iconHint.png");
@@ -48,7 +49,7 @@ void GameIndicators::loadResources()
     mMusicButton.set(mGame, _("Turn off music"), "iconMusic.png");
 
     // Music
-    sfxSong.setSample("media/music.ogg");
+    sfxSong.setSample(MEDIA_DIR "/music.ogg");
     sfxSong.play();
 }
 
