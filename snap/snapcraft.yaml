@@ -11,7 +11,7 @@ description: |
   over 10 million copies and has been downloadedmore than 150 million times
 icon: freegemas.png
 grade: devel
-confinement: devmode
+confinement: classic
 
 parts:
   freegemas:
@@ -72,6 +72,7 @@ apps:
     desktop: usr/share/applications/freegemas.desktop
     plugs:
       - audio-playback
+      - pulseaudio
       - desktop
       - desktop-legacy
       - opengl
