@@ -73,3 +73,5 @@ install(FILES freegemas.desktop
         DESTINATION share/applications/)
 install(FILES freegemas.svg
         DESTINATION share/icons/hicolor/scalable/apps/)
+install(FILES freegemas.png
+        DESTINATION share/icons/hicolor/128x128/apps/)
