@@ -69,3 +69,7 @@ install(TARGETS freegemas
         RUNTIME DESTINATION bin)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/media
         DESTINATION share/${CMAKE_PROJECT_NAME})
+install(FILES freegemas.desktop
+        DESTINATION share/applications/)
+install(FILES freegemas.svg
+        DESTINATION share/icons/hicolor/scalable/apps/)

@@ -10,13 +10,14 @@ description: |
   same color, potentially causing a chain reaction. The game sold
   over 10 million copies and has been downloadedmore than 150 million times
 
-grade: stable
-confinement: strict
+grade: devel
+confinement: devmode
 
 parts:
   freegemas:
     source: .
     plugin: cmake
+    configflags: [ -DCMAKE_INSTALL_PREFIX=/usr ]
     build-packages:
       - libsdl2-dev
       - libsdl2-image-dev
@@ -67,4 +68,11 @@ parts:
 
 apps:
   freegemas:
-    command: bin/freegemas
+    command: usr/bin/freegemas
+    plugs:
+      - audio-playback
+      - desktop
+      - desktop-legacy
+      - opengl
+      - x11
+      - wayland
