@@ -1,6 +1,7 @@
 #ifndef _PARTICULAS_H_
 #define _PARTICULAS_H_
 
+#include "Config.h"
 #include "go_image.h"
 
 #include "Animation.h"
@@ -100,8 +101,8 @@ public:
         mActive(true)
     {
         // Load the images for the particles
-        mImgParticle1.setWindowAndPath(parentWindow, "media/partc1.png");
-        mImgParticle2.setWindowAndPath(parentWindow, "media/partc2.png");
+        mImgParticle1.setWindowAndPath(parentWindow, MEDIA_DIR "/partc1.png");
+        mImgParticle2.setWindowAndPath(parentWindow, MEDIA_DIR "/partc2.png");
 
         // Reserve the space for the particles
         mParticleVector.reserve(mParticleQuantity);

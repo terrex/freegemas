@@ -26,6 +26,7 @@
 #ifndef _FLOATINGSCORE_H_
 #define _FLOATINGSCORE_H_
 
+#include "Config.h"
 #include <string>
 using namespace std;
 
@@ -44,7 +45,7 @@ public:
 
         // Load the font
         GoSDL::Font tempFont;
-        tempFont.setAll(parentWindow, "media/fuentelcd.ttf", 60);
+        tempFont.setAll(parentWindow, MEDIA_DIR "/fuentelcd.ttf", 60);
 
         // Build the image
         mScoreImage = tempFont.renderText(std::to_string(score), {255, 255, 255, 255});

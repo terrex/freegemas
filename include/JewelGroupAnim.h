@@ -1,6 +1,7 @@
 #ifndef _JEWELGROUPANIM_H_
 #define _JEWELGROUPANIM_H_
 
+#include "Config.h"
 #include "Animation.h"
 
 #include <memory>
@@ -13,13 +14,13 @@ class JewelGroupAnim
 public:
     void loadResources (GoSDL::Window * w)
     {
-        imgGems[0].setWindowAndPath(w, "media/gemWhite.png");
-        imgGems[1].setWindowAndPath(w, "media/gemRed.png");
-        imgGems[2].setWindowAndPath(w, "media/gemPurple.png");
-        imgGems[3].setWindowAndPath(w, "media/gemOrange.png");
-        imgGems[4].setWindowAndPath(w, "media/gemGreen.png");
-        imgGems[5].setWindowAndPath(w, "media/gemYellow.png");
-        imgGems[6].setWindowAndPath(w, "media/gemBlue.png");
+        imgGems[0].setWindowAndPath(w, MEDIA_DIR "/gemWhite.png");
+        imgGems[1].setWindowAndPath(w, MEDIA_DIR "/gemRed.png");
+        imgGems[2].setWindowAndPath(w, MEDIA_DIR "/gemPurple.png");
+        imgGems[3].setWindowAndPath(w, MEDIA_DIR "/gemOrange.png");
+        imgGems[4].setWindowAndPath(w, MEDIA_DIR "/gemGreen.png");
+        imgGems[5].setWindowAndPath(w, MEDIA_DIR "/gemYellow.png");
+        imgGems[6].setWindowAndPath(w, MEDIA_DIR "/gemBlue.png");
 
         for (int i = 0; i < 7; ++i)
         {

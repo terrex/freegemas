@@ -10,14 +10,11 @@ description: |
   same color, potentially causing a chain reaction. The game sold
   over 10 million copies and has been downloadedmore than 150 million times
 
-grade: devel
-confinement: devmode
+grade: stable
+confinement: strict
 
 parts:
   freegemas:
-    source: https://github.com/terrex/freegemas.git
-    source-type: git
-    source-branch: 'to_snap'
     plugin: cmake
     build-packages:
       - libsdl2-dev
