@@ -9,7 +9,7 @@ description: |
   developed for browsers in 2001. The goal is to clear gems of the
   same color, potentially causing a chain reaction. The game sold
   over 10 million copies and has been downloadedmore than 150 million times
-
+icon: snap/gui/freegemas.svg
 grade: devel
 confinement: devmode
 
@@ -68,7 +68,8 @@ parts:
 
 apps:
   freegemas:
-    command: usr/bin/freegemas
+    command: desktop-launch $SNAP/usr/bin/freegemas
+    desktop: usr/share/applications/freegemas.desktop
     plugs:
       - audio-playback
       - desktop
@@ -76,3 +77,5 @@ apps:
       - opengl
       - x11
       - wayland
+      - unity7
+      - alsa
