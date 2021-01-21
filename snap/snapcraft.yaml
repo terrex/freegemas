@@ -1,6 +1,6 @@
 ---
 name: freegemas    # you probably want to 'snapcraft register <name>'
-base: core18
+base: core20
 version: '0.1'
 summary: Open Source version of the well known Bejeweled game
 license: GPL-2.0
