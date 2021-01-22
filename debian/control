@@ -4,12 +4,14 @@ Priority: optional
 Maintainer: Guillermo Gutiérrez <guillermo@gutierrez.dev>
 Build-Depends: debhelper-compat (= 12)
 Standards-Version: 4.4.1
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Browser: https://salsa.debian.org/debian/freegemas
-#Vcs-Git: https://salsa.debian.org/debian/freegemas.git
+Homepage: https://github.com/JoseTomasTocino/freegemas
+Vcs-Browser: https://github.com/JoseTomasTocino/freegemas
+Vcs-Git: https://github.com/JoseTomasTocino/freegemas.git
 
 Package: freegemas
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Open source version of the well known Bejeweled
+ Freegemas is an open source version of the well known
+ Bejeweled, for GNU/Linux and Windows.
+ It's written in C++ using SDL2.

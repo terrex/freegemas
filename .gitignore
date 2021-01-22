@@ -208,3 +208,9 @@ FakesAssemblies/
 #CLion
 .idea/
 cmake-build-debug/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/freegemas.substvars
+debian/freegemas/
+obj-x86_64-linux-gnu/

@@ -1,6 +1,9 @@
 The Debian Package freegemas
 ----------------------------
 
-Comments regarding the Package
+Debian package for upstream source code of game freegemas,
+by José Tomás Tocino García <theom3ga@gmail.com>.
+
+Debian & snapcraft package is made by Guillermo Gutiérrez <guillermo@gutierrez.dev>.
 
  -- Guillermo Gutiérrez <guillermo@gutierrez.dev>  Thu, 21 Jan 2021 17:14:27 +0100

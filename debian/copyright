@@ -1,16 +1,19 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: freegemas
-Upstream-Contact: <preferred name and address to reach the upstream project>
-Source: <url://example.com>
+Upstream-Contact: José Tomás Tocino García <theom3ga@gmail.com>
+Source: https://github.com/JoseTomasTocino/freegemas
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: 2010-2012 José Tomás Tocino García <theom3ga@gmail.com>
 License: GPL-2.0+
 
 Files: debian/*
 Copyright: 2021 Guillermo Gutiérrez <guillermo@gutierrez.dev>
 License: GPL-2.0+
+
+Files: media/*.ogg
+Copyright: 2012 Easy Lemon by Kevin MacLeod Li <https://incompetech.com/wordpress/author/kevin/>
+License: CC-BY-3.0
 
 License: GPL-2.0+
  This package is free software; you can redistribute it and/or modify
@@ -29,11 +32,9 @@ License: GPL-2.0+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
-# Please avoid picking licenses with terms that are more restrictive than the
-# packaged work, as it may make Debian's contributions unacceptable upstream.
-#
-# If you need, there are some extra license texts available in two places:
-#   /usr/share/debhelper/dh_make/licenses/
-#   /usr/share/common-licenses/
+License: CC-BY-3.0
+ This work is licensed under the Creative Commons Attribution 3.0 Unported License.
+ To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/
+ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+ .
+ Full text <https://creativecommons.org/licenses/by/3.0/legalcode.txt>
