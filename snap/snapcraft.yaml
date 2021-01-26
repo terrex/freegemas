@@ -10,8 +10,8 @@ description: |
   same color, potentially causing a chain reaction. The game sold
   over 10 million copies and has been downloadedmore than 150 million times
 icon: freegemas.png
-grade: devel
-confinement: classic
+grade: stable
+confinement: strict
 
 parts:
   freegemas:
@@ -23,6 +23,48 @@ parts:
       - libsdl2-image-dev
       - libsdl2-mixer-dev
       - libsdl2-ttf-dev
+    stage-packages:
+      - libasound2
+      - libasyncns0
+      - libflac8
+      - libfluidsynth1
+      - libfreetype6
+      - libjack-jackd2-0
+      - libjbig0
+      - libjpeg-turbo8
+      - libmad0
+      - libmodplug1
+      - libogg0
+      - libpng16-16
+      - libpulse0
+      - libsdl2-2.0-0
+      - libsdl2-image-2.0-0
+      - libsdl2-mixer-2.0-0
+      - libsdl2-ttf-2.0-0
+      - libsndfile1
+      - libsndio6.1
+      - libtiff5
+      - libvorbis0a
+      - libvorbisenc2
+      - libvorbisfile3
+      - libwayland-client0
+      - libwayland-cursor0
+      - libwayland-egl1
+      - libwebp6
+      - libx11-6
+      - libxau6
+      - libxcb1
+      - libxcursor1
+      - libxdmcp6
+      - libxext6
+      - libxfixes3
+      - libxi6
+      - libxinerama1
+      - libxkbcommon0
+      - libxrandr2
+      - libxrender1
+      - libxss1
+      - libxxf86vm1
 
 apps:
   freegemas:

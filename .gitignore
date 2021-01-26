@@ -214,3 +214,4 @@ debian/files
 debian/freegemas.substvars
 debian/freegemas/
 obj-x86_64-linux-gnu/
+freegemas_*.snap
