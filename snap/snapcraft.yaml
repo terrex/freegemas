@@ -11,10 +11,20 @@ description: |
   over 10 million copies and has been downloadedmore than 150 million times
 icon: freegemas.png
 grade: stable
-confinement: classic
+confinement: strict
 
 parts:
+  desktop-glib-only:
+    plugin: make
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: glib-only
+    build-packages:
+      - libglib2.0-dev
+    stage-packages:
+      - libglib2.0-bin
+
   freegemas:
+    after: [desktop-glib-only]
     source: .
     plugin: cmake
     configflags: [ -DCMAKE_INSTALL_PREFIX=/usr ]
@@ -24,37 +34,72 @@ parts:
       - libsdl2-mixer-dev
       - libsdl2-ttf-dev
     stage-packages:
+      - libapparmor1
       - libasound2
       - libasyncns0
+      - libbsd0
+      - libdrm2
+      - libdrm-amdgpu1
+      - libdrm-nouveau2
+      - libdrm-radeon1
+      - libedit2
+      - libelf1
+      - libffi6
       - libflac8
       - libfluidsynth1
       - libfreetype6
+      - libgcrypt20
+      - libgl1
+      - libgl1-mesa-dri
+      - libglapi-mesa
+      - libglib2.0-0
+      - libglvnd0
+      - libglx0
+      - libglx-mesa0
+      - libinstpatch-1.0-0
       - libjack-jackd2-0
       - libjbig0
       - libjpeg-turbo8
+      - libllvm10
+      - liblz4-1
       - libmad0
       - libmodplug1
+      - libmpg123-0
       - libogg0
+      - libopus0
+      - libopusfile0
       - libpng16-16
       - libpulse0
       - libsdl2-2.0-0
       - libsdl2-image-2.0-0
       - libsdl2-mixer-2.0-0
       - libsdl2-ttf-2.0-0
+      - libsensors4
       - libsndfile1
       - libsndio6.1
+      - libstdc++6
       - libtiff5
       - libvorbis0a
       - libvorbisenc2
       - libvorbisfile3
+      - libvulkan1
       - libwayland-client0
       - libwayland-cursor0
       - libwayland-egl1
       - libwebp6
+      - libwrap0
       - libx11-6
+      - libx11-xcb1
       - libxau6
       - libxcb1
+      - libxcb-dri2-0
+      - libxcb-dri3-0
+      - libxcb-glx0
+      - libxcb-present0
+      - libxcb-sync1
+      - libxcb-xfixes0
       - libxcursor1
+      - libxdamage1
       - libxdmcp6
       - libxext6
       - libxfixes3
@@ -63,10 +108,30 @@ parts:
       - libxkbcommon0
       - libxrandr2
       - libxrender1
+      - libxshmfence1
       - libxss1
       - libxxf86vm1
+      - libzstd1
+      - libegl1-mesa-drivers
+      - libegl1
+      - libegl-mesa0
 
 apps:
   freegemas:
     command: usr/bin/freegemas
     desktop: usr/share/applications/freegemas.desktop
+    plugs:
+      - home
+      - x11
+      - opengl
+      - alsa
+      - pulseaudio
+      - network
+      - joystick
+      - hidraw
+      - desktop
+      - desktop-legacy
+      - wayland
+      - unity7
+      - audio-playback
+      - network-bind
