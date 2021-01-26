@@ -112,9 +112,12 @@ parts:
       - libxss1
       - libxxf86vm1
       - libzstd1
-      - libegl1-mesa-drivers
+      - libegl1-mesa
       - libegl1
       - libegl-mesa0
+      - libva-glx2
+      - libvdpau-va-gl1
+      - libnvidia-gl-460
 
 apps:
   freegemas:
