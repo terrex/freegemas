@@ -11,7 +11,7 @@ description: |
   over 10 million copies and has been downloadedmore than 150 million times
 icon: freegemas.png
 grade: stable
-confinement: strict
+confinement: classic
 
 parts:
   freegemas:
